@@ -1,0 +1,15 @@
+<resources>
+
+    <dimen name="small_50">4dp</dimen>
+    <dimen name="small_100">8dp</dimen>
+
+    <dimen name="normal_100">16dp</dimen>
+    <dimen name="normal_125">20dp</dimen>
+
+    <!-- You can go on with normal_300, normal_325, etc. -->
+    <!-- You can also go with large_xxx having 'larger' steps -->
+
+    <dimen name="h6">20sp</dimen>
+    <dimen name="body_1">16sp</dimen>
+
+</resources>

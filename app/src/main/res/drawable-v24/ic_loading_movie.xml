@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:bottom="1dp"
+        android:drawable="@color/placeholder"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp"/>
+
+    <item
+        android:bottom="@dimen/normal_125"
+        android:drawable="@drawable/ic_movie"
+        android:left="@dimen/normal_125"
+        android:right="@dimen/normal_125"
+        android:top="@dimen/normal_125"/>
+
+</layer-list>

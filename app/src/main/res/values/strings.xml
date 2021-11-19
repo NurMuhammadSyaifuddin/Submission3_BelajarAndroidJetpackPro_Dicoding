@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">LastSubmission</string>
+    <string name="app_title_movie">Now Playing Movie</string>
+    <string name="app_title_tvshow">Tv Show Airing Today</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="image_highlight">Image Highlight</string>
+    <string name="lb_description">Description</string>
+    <string name="movie">Movie</string>
+    <string name="tvshow">Tv Show</string>
+    <string name="tab_title_movie">MOVIE</string>
+    <string name="tab_title_tvshow">TV SHOW</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="favorite">Favorite</string>
+    <string name="empty_state_title_no_favorite_item">No favorites yet</string>
+    <string name="empty_state_desc_no_favorite_item_movie">You don\'t have a list of favorite movies</string>
+    <string name="empty_state_desc_no_favorite_item_tvshow">You don\'t have a list of favorite tv show</string>
+    <string name="app_title">MOVIE CATALOG</string>
+</resources>
