@@ -1,6 +1,5 @@
 package com.project.lastsubmission.data.source
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
@@ -14,7 +13,6 @@ import com.project.lastsubmission.data.source.remote.vo.ApiResponse
 import com.project.lastsubmission.vo.Resource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.asCoroutineDispatcher
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import java.util.concurrent.Executors
 import javax.inject.Inject
@@ -52,16 +50,8 @@ class FakeCatalogRepository @Inject constructor(
             override fun createCall(): LiveData<ApiResponse<List<MovieResponse>>> =
                 remoteDataSource.getMovies()
 
-            override suspend fun shouldFetchData(): Boolean {
-
-                val dataOnline = scope.async { localDataSource.getCountMovie() }
-                Log.e("movie", "data.size.movie: ${dataOnline.await()}")
-
-                val isOnline = dataOnline.await() == 0
-                Log.e("movie", "data.movie.isOnline: $isOnline")
-
-                return isOnline
-            }
+            override fun shouldFetchData(data: PagedList<MovieEntitiy>?): Boolean =
+                data.isNullOrEmpty()
 
 
             override fun loadFromDb(): LiveData<PagedList<MovieEntitiy>> {
@@ -102,16 +92,8 @@ class FakeCatalogRepository @Inject constructor(
             override fun createCall(): LiveData<ApiResponse<List<TvShowResponse>>> =
                 remoteDataSource.getTvShow()
 
-            override suspend fun shouldFetchData(): Boolean {
-
-                val dataOnline = scope.async { localDataSource.getCountTvShow() }
-                Log.e("tvshow", "data.size.tvshow: ${dataOnline.await()}")
-
-                val isOnline = dataOnline.await() == 0
-                Log.e("tvshow", "data.tvshow.isOnline: $isOnline")
-
-                return isOnline
-            }
+            override fun shouldFetchData(data: PagedList<TvShowEntity>?): Boolean =
+                data.isNullOrEmpty()
 
             override fun loadFromDb(): LiveData<PagedList<TvShowEntity>> {
                 val config = PagedList.Config.Builder().apply {

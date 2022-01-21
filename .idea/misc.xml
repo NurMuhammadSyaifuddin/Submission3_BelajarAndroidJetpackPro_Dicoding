@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/PROJECT/STUDI INDEPENDEN/Belajar Android Jetpack Pro/LastSubmission/app/src/main/res/layout/activity_home.xml" value="0.10740740740740741" />
+        <entry key="..\:/PROJECT/STUDI INDEPENDEN/Belajar Android Jetpack Pro/LastSubmission/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22447916666666667" />
+      </map>
+    </option>
+  </component>
   <component name="EntryPointsManager">
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="dagger.BindsInstance" />
